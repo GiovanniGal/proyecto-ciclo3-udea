@@ -40,3 +40,18 @@ exports.deleteUserByEMail = (req, res) => {
         };
     })
 };
+
+exports.editUser = (req, res) => {
+    const query = {email:req.params.email};
+    User.findOneAndUpdate(query, {rol: req.body.rol}).then((updatedUser) => {
+      if (updatedUser) {
+        res
+          .status(200)
+          .json(`El usuario con el correo ${req.params.email} ha sido actualizado`);
+      } else {
+        res
+          .status(404)
+          .json(`Usuario no encontrado con el correo ${req.params.email}`);
+      }
+    });
+  };

@@ -24,11 +24,11 @@ function MyVerticallyCenteredModal(props) {
         <Modal.Body>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Nombre</Form.Label>
-            <Form.Control type="email" placeholder={user.name} />
+            <Form.Control type="email" placeholder={user.name} disabled/>
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Correo</Form.Label>
-            <Form.Control type="email" placeholder="pperez@reactivos.com" />
+            <Form.Control type="email" placeholder="pperez@reactivos.com" disabled/>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Select aria-label="Default select example">
@@ -36,31 +36,6 @@ function MyVerticallyCenteredModal(props) {
               <option value="1">Vendedor</option>
               <option value="2">Administrador</option>
             </Form.Select>
-          </Form.Group>
-          <Form.Group as={Row} className="mb-3">
-            <Form.Label as="legend" column sm={2}>
-              Estado
-            </Form.Label>
-            <Col sm={10}>
-              <Form.Check
-                type="radio"
-                label="Autorizado"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios1"
-              />
-              <Form.Check
-                type="radio"
-                label="No autoriado"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios2"
-              />
-              <Form.Check
-                type="radio"
-                label="Pendiente"
-                name="formHorizontalRadios"
-                id="formHorizontalRadios3"
-              />
-            </Col>
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
